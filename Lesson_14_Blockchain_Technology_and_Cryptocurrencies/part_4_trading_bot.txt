@@ -1,0 +1,5 @@
+function tradingBot(market_data):
+    if market_data['signal'] == 'buy':
+        executeBuyOrder()
+    elif market_data['signal'] == 'sell':
+        executeSellOrder()
