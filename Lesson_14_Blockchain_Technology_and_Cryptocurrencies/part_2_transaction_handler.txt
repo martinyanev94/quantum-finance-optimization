@@ -1,0 +1,8 @@
+function sendTransaction(sender, receiver, amount):
+    if checkBalance(sender) >= amount:
+        deductAmount(sender, amount)
+        addAmount(receiver, amount)
+        broadcastNewTransaction(sender, receiver, amount)
+        return "Transaction successful"
+    else:
+        return "Insufficient balance"
